@@ -21,6 +21,7 @@ FastCli -p 15 -c "show cpu counter queue summary"        > $dir/sh.cpu.cnt.qu.su
 FastCli -p 15 -c "show cpu counter queue | nz"           > $dir/sh.cpu.cnt.qu.nz.$tag.txt
 FastCli -p 15 -c "show hardware counter drop | nz"       > $dir/sh.hw.cnt.drop.nz.$tag.txt
 FastCli -p 15 -c "show platform fap counters drops | nz" > $dir/sh.plat.fap.cnt.drop.nz.$tag.txt
+FastCli -p 15 -c "sh interfaces counters discards | nz"  > $dir/sh.int.cnt.disc.nz.$tag.txt
 
 echo "copying arp/mac under $dir with tag - $tag............"
 FastCli -p 15 -c "show arp"                    > $dir/sh.arp.$tag.txt
